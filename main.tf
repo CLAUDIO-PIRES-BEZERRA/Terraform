@@ -114,7 +114,7 @@ resource "azurerm_linux_virtual_machine" "vm-aula" {
   location                        = azurerm_resource_group.rg-aula-vm.location
   size                            = "Standard_DS1_v2"
   admin_username                  = "adminuser"
-  admin_password                  = "d210szD$"
+  admin_password                  = "a210szD$"
   disable_password_authentication = false
 
   network_interface_ids = [
@@ -143,7 +143,7 @@ resource "null_resource" "install-nginx" {
     connection {
       type     = "ssh"
       user     = "adminuser"
-      password = "d210szD$"
+      password = "a210szD$"
       host     = azurerm_public_ip.pip-aula.ip_address
     }
     inline = [
